@@ -21,8 +21,8 @@ st.write("Masukkan data klinis pasien di bawah ini untuk memprediksi potensi ris
 # ---------------------------------------------------------
 @st.cache_resource
 def load_and_train_model():
-    # Mengunduh/membaca dataset
-    df = pd.read_csv("https://raw.githubusercontent.com/datasets/diabetes-prediction/main/diabetes_prediction_dataset.csv") 
+    # Mengubah URL online menjadi pembacaan file CSV lokal dari repositori GitHub
+    df = pd.read_csv("diabetes_prediction_dataset.csv") 
     df.drop_duplicates(inplace=True)
 
     # Preprocessing
